@@ -5,11 +5,14 @@ import {
   Navbar, //
   Container,
   Nav,
-  Button,
+  Dropdown,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import { useAuth } from '../utils/context/authContext';
 
 export default function NavBar() {
+  const { user } = useAuth();
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -23,12 +26,17 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link passHref href="/delete-me">
-              <Nav.Link>Delete Me</Nav.Link>
-            </Link>
-            <Button variant="danger" onClick={signOut}>
-              Sign Out
-            </Button>
+            <Dropdown
+              align="end"
+              navbar="true"
+            >
+              <Dropdown.Toggle className="border-none bg-transparent">
+                <img src={user.fbUser.photoURL} alt="user" />
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="rounded-sm">
+                <Dropdown.Item onClick={signOut}>Sign Out</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
