@@ -3,13 +3,17 @@
 
 html,
 body {
-  padding: 0;
+  min-height: 100vh;
   margin: 0;
   background-color: #212529;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+_next{
+  width: 100%;
+  
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -25,7 +29,6 @@ a {
 
 .nav-link {
   margin-right: 20px;
-  color: #32fbe2;
 }
 
 .large {
@@ -40,22 +43,30 @@ a {
 
 #user-menu {
   justify-items: end;
-  margin: none;
+  margin: 0;
+  box-shadow: none;
+  border: none;
 }
 
 #home-buttons {
   display: flex;
-  flex-direction: column;
   width: 200px;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
-Button {
+.home-btn {
+  min-width: 200px;
+}
+
+.btn {
   margin: 10px;
-  
+  border-radius: 0;
 }
 
 h4 {
-  color: #3cf281;
+  margin-bottom: 10px;
+  color: whitesmoke;
 }
 
 #order-container {
@@ -63,12 +74,21 @@ h4 {
   justify-content: space-evenly;
 }
 
-#open {
+.column {
   display: flex;
   flex-direction: column;
 }
 
-#closed {
+.column-center {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#navbar {
+  background-color: black!important;
+}
+
+#footer {
+  padding: 0;
 }
