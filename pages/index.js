@@ -1,26 +1,27 @@
 import { Image, Button } from 'react-bootstrap';
+import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
   const { user } = useAuth();
   return (
-    <div style={{ padding: '10px' }}>
+    <div style={{ padding: '20px' }} className="column">
       <h4>Hello {user.fbUser.displayName}! </h4>
 
       <div
-        className="text-center d-flex flex-column align-content-center align-items-center"
-        style={{
-          height: '90vh',
-          padding: '30px',
-          maxWidth: '400px',
-          margin: '0 auto',
-        }}
+        className="column-center"
       >
-        <Image style={{ height: '200px', width: '200px' }} src="/images/logoname.png" />
+        <Image style={{ height: '300px', width: '300px', marginBottom: '20px' }} src="/images/logoname.png" />
         <div id="home-buttons">
-          <Button variant="danger">View Orders</Button>
-          <Button variant="warning">Start Order</Button>
-          <Button variant="success">View Revenue</Button>
+          <Link passHref href="/orders">
+            <Button className="home-btn" variant="danger">View Orders</Button>
+          </Link>
+          <Link passHref href="/orders/new">
+            <Button className="home-btn" variant="warning">Start Order</Button>
+          </Link>
+          <Link passHref href="/revenue">
+            <Button className="home-btn" variant="success">View Revenue</Button>
+          </Link>
         </div>
       </div>
     </div>

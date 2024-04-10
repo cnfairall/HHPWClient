@@ -10,16 +10,16 @@ export default function ViewOrders() {
 
   return (
     <div id="order-container">
-      <div id="open">
+      <div id="open" className="column">
 
-      {orders.openOrders?.map((order) => (
-        <OrderCard order={order} />
-      ))}
+        {orders.openOrders?.map((order) => (
+          <OrderCard order={order} />
+        ))}
       </div>
-      <div id="closed">
-      {orders.closedOrders?.map((order) => (
-        <OrderCard order={order} />
-      ))}
+      <div id="closed" className="column">
+        {orders.closedOrders?.map((order) => (
+          <OrderCard order={order} />
+        ))}
       </div>
     </div>
   );
