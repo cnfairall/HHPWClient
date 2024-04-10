@@ -1,9 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave');
 
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #212529;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -17,6 +19,56 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #88effd;
+.Sedgwick {
+  font-family: Sedgwick Ave;
+}
+
+.nav-link {
+  margin-right: 20px;
+  color: #32fbe2;
+}
+
+.large {
+  font-size: 20px;
+}
+
+.spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-menu {
+  justify-items: end;
+  margin: none;
+}
+
+#home-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+Button {
+  margin: 10px;
+  
+}
+
+h4 {
+  color: #3cf281;
+}
+
+#order-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#open {
+  display: flex;
+  flex-direction: column;
+}
+
+#closed {
+  display: flex;
+  flex-direction: column;
 }
