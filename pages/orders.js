@@ -7,7 +7,7 @@ export default function ViewOrders() {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     getOrders().then(setOrders);
-  }, [orders]);
+  }, [orders.count]);
 
   return (
     <div style={{ marginTop: '20px' }}>
