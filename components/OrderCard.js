@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
-import getOrderType from '../api/OrderTypeApi';
+import { getOrderType } from '../api/OrderTypeApi';
+import { deleteOrder } from '../api/OrdersApi';
 
 export default function OrderCard({ order }) {
   const [orderType, setOrderType] = useState({});
+  const deleteAnOrder = () => {
+    deleteOrder(order.id);
+  };
+
   useEffect(() => {
     getOrderType(order.orderTypeId).then(setOrderType);
   }, [order]);
@@ -19,6 +24,14 @@ export default function OrderCard({ order }) {
           <p>{order.custEmail}</p>
           <p>{orderType?.name}</p>
         </Card.Body>
+        {order.isClosed === false ? (
+          <>
+            <Link passHref href={`/orders/edit/${order.id}`}>
+              <Button>Edit</Button>
+            </Link>
+            <Button onClick={deleteAnOrder}>Delete</Button>
+          </>
+        ) : ('')}
       </Card>
     </>
   );
@@ -31,5 +44,6 @@ OrderCard.propTypes = {
     custName: PropTypes.string,
     phoneNum: PropTypes.string,
     custEmail: PropTypes.string,
+    isClosed: PropTypes.bool,
   }).isRequired,
 };

@@ -34,7 +34,7 @@ const getOrderDetails = (id) => new Promise((resolve, reject) => {
 });
 
 const createOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/api/users/new`, {
+  fetch(`${endpoint}/api/orders/new`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
