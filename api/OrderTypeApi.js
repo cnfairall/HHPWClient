@@ -13,4 +13,15 @@ const getOrderType = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getOrderType;
+const getOrderTypes = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/api/ordertypes`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export { getOrderType, getOrderTypes };
