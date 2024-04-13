@@ -69,7 +69,7 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const addItem = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/api/orders/${payload.OrderId}/add`, {
+  fetch(`${endpoint}/api/orders/${payload.orderId}/add`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const addItem = (payload) => new Promise((resolve, reject) => {
 });
 
 const removeItem = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/api/orders/${payload.OrderId}/remove`, {
+  fetch(`${endpoint}/api/orders/${payload.orderId}/remove`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave');
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 html,
 body {
@@ -37,7 +38,7 @@ a {
 
 .spread {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -64,7 +65,7 @@ a {
   border-radius: 0;
 }
 
-h4 {
+#greeting {
   margin-bottom: 10px;
   color: whitesmoke;
 }
@@ -91,4 +92,35 @@ h4 {
 
 #footer {
   padding: 0;
+}
+
+.order-item-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.order-item {
+  padding: 8px;
+  width: 100%
+}
+
+#del-item {
+  background-color: white;
+  border: white;
+  padding: 0;
+}
+
+.bi-trash3-fill {
+  color: black;
+}
+
+.edit {
+  margin-bottom: 6px;
+  margin-top: -8px;
+}
+
+p {
+  margin-bottom: 8px;
 }
