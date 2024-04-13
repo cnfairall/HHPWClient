@@ -41,7 +41,10 @@ function OrderForm({ order }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form
+      style={{ width: '700px' }}
+      onSubmit={handleSubmit}
+    >
       <Form.Group className="mb-3">
         <Form.Label>Customer Name</Form.Label>
         <Form.Control

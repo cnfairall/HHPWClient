@@ -9,6 +9,7 @@ import OrderItem from './OrderItem';
 
 export default function OrderCard({ order }) {
   const [orderType, setOrderType] = useState({});
+  const [noItems, setNoItems] = useState(false);
   const router = useRouter();
   const { pathname } = router;
   const isDetail = pathname.includes('id');
@@ -27,6 +28,7 @@ export default function OrderCard({ order }) {
 
   useEffect(() => {
     getOrderType(order?.orderTypeId).then(setOrderType);
+    if (order?.items.length < 1) setNoItems(true);
   }, [order]);
 
   return (
@@ -38,6 +40,7 @@ export default function OrderCard({ order }) {
           <p>{order?.custEmail}</p>
           <p>{orderType?.name}</p>
 
+          {isDetail && noItems === true ? (<p>No items</p>) : ('')}
           {isDetail && order?.isClosed === false ? (
             order?.items.map((singleItem) => (
               <div className="order-item-box" key={singleItem.id}>
@@ -45,6 +48,14 @@ export default function OrderCard({ order }) {
                 <Button id="del-item" onClick={() => deleteItem(singleItem)}>
                   <i className="bi bi-trash3-fill" />
                 </Button>
+              </div>
+            ))
+          ) : ('')}
+
+          {isDetail && order?.isClosed === true ? (
+            order?.items.map((singleItem) => (
+              <div className="order-item-box" key={singleItem.id}>
+                <OrderItem item={singleItem} />
               </div>
             ))
           ) : ('')}

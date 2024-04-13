@@ -6,7 +6,7 @@ function Home() {
   const { user } = useAuth();
   return (
     <div style={{ padding: '20px' }} className="column">
-      <h4>Hello {user.fbUser.displayName}! </h4>
+      <h5 id="greeting">Hello {user.fbUser.displayName}! </h5>
 
       <div
         className="column-center"
