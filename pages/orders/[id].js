@@ -13,6 +13,8 @@ export default function OrderDetails() {
   }, [id]);
 
   return (
-    <OrderCard order={order} />
+    <div className="d-flex flex-column align-items-center justify-items-center">
+      <OrderCard order={order} />
+    </div>
   );
 }

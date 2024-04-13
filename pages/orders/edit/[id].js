@@ -13,6 +13,8 @@ export default function EditOrder() {
   }, [id]);
 
   return (
-    <OrderForm order={editItem} />
+    <div className="text-center d-flex flex-column justify-content-center align-content-center">
+      <OrderForm order={editItem} />
+    </div>
   );
 }

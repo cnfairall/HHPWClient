@@ -10,7 +10,13 @@ export default function ViewOrders() {
   }, [orders.count]);
 
   return (
-    <div style={{ marginTop: '20px' }}>
+    <div style={{
+      height: '90vh',
+      padding: '20px',
+      maxWidth: '700px',
+      margin: '0 auto',
+    }}
+    >
       <Tabs
         defaultActiveKey="open"
         id="order-tabs"
