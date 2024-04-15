@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import OrderCard from '../../components/OrderCard';
 import { getOrderDetails } from '../../api/OrdersApi';
+import MenuSelect from '../../components/MenuSelect';
 
 export default function OrderDetails() {
   const router = useRouter();
@@ -15,6 +16,9 @@ export default function OrderDetails() {
   return (
     <div className="d-flex flex-column align-items-center justify-items-center">
       <OrderCard order={order} />
+      {order?.isClosed === false ? (
+        <MenuSelect />
+      ) : ('')}
     </div>
   );
 }
