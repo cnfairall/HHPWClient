@@ -55,7 +55,7 @@ export default function MenuSelect() {
             value={formData.itemId}
             required
           >
-            <option value="">Select Menu Item</option>
+            <option style={{ fontStyle: 'italic' }} value="">Select Menu Item</option>
             {
             menuItems.map((mi) => (
               <option

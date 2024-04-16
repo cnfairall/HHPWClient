@@ -103,7 +103,8 @@ a {
 
 .order-item {
   padding: 8px;
-  width: 100%
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 #del-item {
@@ -123,4 +124,12 @@ a {
 
 p {
   margin-bottom: 8px;
+}
+
+#order-summ {
+  color: white;
+  background-color: #212529;
+  max-width: 700px;
+  padding: 12px;
+  margin: 20px;
 }
