@@ -42,7 +42,7 @@ function OrderForm({ order }) {
 
   return (
     <Form
-      style={{ width: '700px' }}
+      style={{ width: '700px', color: 'white' }}
       onSubmit={handleSubmit}
     >
       <Form.Group className="mb-3">
@@ -79,14 +79,15 @@ function OrderForm({ order }) {
         />
       </Form.Group>
       <Form.Group className="mb-3">
+      <Form.Label>Order Type</Form.Label>
         <Form.Select
-          aria-label="Order Type"
+          aria-label="Select Order Type"
           name="orderTypeId"
           onChange={handleChange}
           value={formData?.orderTypeId}
           required
         >
-          <option value="">Order Type</option>
+          <option style={{ fontStyle: 'italic' }} value="">Select Order Type</option>
           {
             orderTypes.map((ot) => (
               <option

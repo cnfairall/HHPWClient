@@ -54,7 +54,6 @@ export default function OrderCard({ order }) {
         <Link passHref href={`/orders/${order?.id}`}>
           <Card.Body className="flex">
             <h5>{order?.custName}</h5>
-
             <p>{order?.phoneNum}</p>
             <p>{order?.custEmail}</p>
             <p>{orderType?.name}</p>
@@ -76,6 +75,9 @@ export default function OrderCard({ order }) {
                   </Modal>
                 </div>
               ))
+            ) : ('')}
+            {isDetail && order?.isClosed === false ? (
+              <p style={{ margin: '8px' }}>Subtotal: ${order?.subtotal}</p>
             ) : ('')}
 
             {isDetail && order?.isClosed === true ? (
@@ -117,6 +119,7 @@ OrderCard.propTypes = {
     phoneNum: PropTypes.string.isRequired,
     custEmail: PropTypes.string.isRequired,
     isClosed: PropTypes.bool.isRequired,
+    subtotal: PropTypes.number,
     items: PropTypes.arrayOf(PropTypes.shape({
       item: PropTypes.shape({
         id: PropTypes.number,
