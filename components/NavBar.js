@@ -9,6 +9,7 @@ import {
   Image,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 export default function NavBar() {
   return (
@@ -33,6 +34,7 @@ export default function NavBar() {
             </Link>
           </Nav>
         </Navbar.Collapse>
+        <SearchBar />
         <Dropdown align="end">
           <Dropdown.Toggle id="user-menu" className="border-none bg-transparent">
             <Image roundedCircle src="/images/user.png" alt="user" style={{ width: '80px', height: '80px' }} />

@@ -133,3 +133,7 @@ p {
   padding: 12px;
   margin: 20px;
 }
+
+#search-bar {
+  width: 300px;
+}
