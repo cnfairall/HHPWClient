@@ -92,6 +92,17 @@ const removeItem = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const searchOrders = (searchInput) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/api/orders/search/${searchInput}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
-  getOrders, getOrderDetails, createOrder, deleteOrder, updateOrder, addItem, removeItem,
+  getOrders, getOrderDetails, createOrder, deleteOrder, updateOrder, addItem, removeItem, searchOrders,
 };

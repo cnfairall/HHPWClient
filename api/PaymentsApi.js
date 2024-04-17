@@ -36,4 +36,17 @@ const getPaymentByOrderId = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { closeOrder, getRevenue, getPaymentByOrderId };
+const getPayments = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/api/payments`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export {
+  closeOrder, getRevenue, getPaymentByOrderId, getPayments,
+};

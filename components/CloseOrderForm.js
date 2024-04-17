@@ -24,7 +24,7 @@ function CloseOrderForm({ order }) {
       ...formData,
       orderDate: new Date(),
     };
-    closeOrder(payload).then(() => router.push('/orders'));
+    closeOrder(payload).then(() => router.push(`/orders/${order.id}`));
   };
 
   const handleChange = (e) => {
