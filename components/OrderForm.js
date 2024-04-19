@@ -42,7 +42,7 @@ function OrderForm({ order }) {
 
   return (
     <Form
-      style={{ width: '700px', color: 'white' }}
+      id="order-form"
       onSubmit={handleSubmit}
     >
       <Form.Group className="mb-3">
@@ -79,7 +79,7 @@ function OrderForm({ order }) {
         />
       </Form.Group>
       <Form.Group className="mb-3">
-      <Form.Label>Order Type</Form.Label>
+        <Form.Label>Order Type</Form.Label>
         <Form.Select
           aria-label="Select Order Type"
           name="orderTypeId"
@@ -101,7 +101,7 @@ function OrderForm({ order }) {
         </Form.Select>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button id="order-form-btn" variant="primary" type="submit">
         Submit
       </Button>
     </Form>

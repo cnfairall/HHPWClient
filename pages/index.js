@@ -6,21 +6,36 @@ function Home() {
   const { user } = useAuth();
   return (
     <div style={{ padding: '20px' }} className="column">
-      <h5 id="greeting">Hello {user.fbUser.displayName}! </h5>
+      <p id="greeting">Hello {user.fbUser.displayName}! </p>
 
       <div
         className="column-center"
       >
-        <Image style={{ height: '300px', width: '300px', marginBottom: '20px' }} src="/images/logoname.png" />
+        <Image style={{ height: '400px', width: '400px', marginBottom: '20px' }} src="/images/logoname.png" />
         <div id="home-buttons">
           <Link passHref href="/orders">
-            <Button className="home-btn" variant="danger">View Orders</Button>
+            <div className="button">
+
+              <div className="button-top text">VIEW ORDERS</div>
+              <div className="button-bottom" />
+              <div className="button-base" />
+            </div>
           </Link>
           <Link passHref href="/orders/new">
-            <Button className="home-btn" variant="warning">Start Order</Button>
+            <div className="button">
+
+              <div className="button-top text">START ORDER</div>
+              <div className="button-bottom" />
+              <div className="button-base" />
+            </div>
           </Link>
           <Link passHref href="/revenue">
-            <Button className="home-btn" variant="success">View Revenue</Button>
+            <div className="button">
+
+              <div className="button-top text">VIEW REVENUE</div>
+              <div className="button-bottom" />
+              <div className="button-base" />
+            </div>
           </Link>
         </div>
       </div>

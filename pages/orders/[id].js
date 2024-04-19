@@ -14,7 +14,7 @@ export default function OrderDetails() {
 
   useEffect(() => {
     getOrderDetails(id).then(setOrder);
-  }, [id]);
+  }, []);
 
   const formattedDate = moment(order?.payment?.orderDate).format('L');
 

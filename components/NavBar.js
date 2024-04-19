@@ -9,7 +9,6 @@ import {
   Image,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
-import SearchBar from './SearchBar';
 
 export default function NavBar() {
   return (
@@ -17,12 +16,12 @@ export default function NavBar() {
       <Container>
         <Link passHref href="/">
           <Navbar.Brand>
-            <Image alt="logo" src="/images/logo.png" style={{ width: '100px', height: '100px' }} />
+            <Image alt="logo" src="/images/smLogo.png" style={{ width: '100px', height: '100px', marginRight: '30px' }} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto large">
+          <Nav className="me-auto large Sedgwick">
             <Link passHref href="/orders/new">
               <Nav.Link>NEW</Nav.Link>
             </Link>
@@ -34,7 +33,6 @@ export default function NavBar() {
             </Link>
           </Nav>
         </Navbar.Collapse>
-        <SearchBar />
         <Dropdown align="end">
           <Dropdown.Toggle id="user-menu" className="border-none bg-transparent">
             <Image roundedCircle src="/images/user.png" alt="user" style={{ width: '80px', height: '80px' }} />

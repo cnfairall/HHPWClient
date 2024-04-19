@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "next lint"
+    "pre-commit": "next lint",
+    "scss": "sass --whatch scss -o css"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -27,7 +28,8 @@
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-bootstrap": "^2.4.0",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.75.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

@@ -26,13 +26,16 @@ export default function OrderCard({ order }) {
   const deleteAnOrder = () => {
     deleteOrder(order.id);
     handleClose();
-    window.location.reload();
+    router.push('/orders');
   };
 
   // delete item modal
   const [showItem, setShowItem] = useState(false);
   const handleShowItem = () => setShowItem(true);
-  const handleCloseItem = () => setShowItem(false);
+  const handleCloseItem = () => {
+    setShowItem(false);
+    window.location.reload();
+  };
   const confirmDeleteItem = () => handleShowItem();
   const deleteItem = (singleItem) => {
     const payload = {
@@ -40,23 +43,26 @@ export default function OrderCard({ order }) {
       itemId: singleItem.item.id,
     };
     removeItem(payload);
-    window.location.reload();
+    handleCloseItem();
   };
 
   useEffect(() => {
     getOrderType(order?.orderTypeId).then(setOrderType);
-    if (order?.items.length < 1) setNoItems(true);
+    if (order?.items?.length < 1) setNoItems(true);
   }, [order]);
 
   return (
     <>
-      <Card style={{ width: '20em', margin: '10px' }}>
+      <Card className="order-card">
         <Link passHref href={`/orders/${order?.id}`}>
           <Card.Body className="flex">
-            <h5>{order?.custName}</h5>
-            <p>{order?.phoneNum}</p>
-            <p>{order?.custEmail}</p>
-            <p>{orderType?.name}</p>
+            <div className="cust-info">
+
+              <h5>{order?.custName}</h5>
+              <p>{order?.phoneNum}</p>
+              <p>{order?.custEmail}</p>
+              <p>{orderType?.name}</p>
+            </div>
 
             {isDetail && noItems === true ? (<p>No items</p>) : ('')}
             {isDetail && order?.isClosed === false ? (
@@ -93,9 +99,14 @@ export default function OrderCard({ order }) {
           <>
             <div className="edit spread">
               <Link passHref href={`/orders/edit/${order.id}`}>
-                <Button>Edit</Button>
+                <Button className="yellow">
+                  <i className="bi bi-pencil-fill" />
+
+                </Button>
               </Link>
-              <Button onClick={confirmDelete}>Delete</Button>
+              <Button className="red" onClick={confirmDelete}>
+                <i className="bi bi-trash3-fill" />
+              </Button>
             </div>
             <Modal show={show} onHide={handleClose}>
               <Modal.Body>
