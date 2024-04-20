@@ -32,14 +32,10 @@ a {
   font-family: Sedgwick Ave Display;
 }
 
-.nav-link {
-  margin-right: 20px;
-  color: white;
-  font-size: 35px;
-}
-
 .large {
-  font-size: 20px;
+  margin-right: 20px;
+  color: white!important;
+  font-size: 35px;
 }
 
 .spread {
@@ -77,7 +73,6 @@ a {
 }
 
 #greeting {
-  margin-bottom: 10px;
   color: whitesmoke;
   font-family: Sedgwick Ave Display;
   font-size: 30px;
@@ -104,8 +99,9 @@ a {
   padding: 0;
 }
 
-#footer {
-  padding: 0;
+h5 {
+  font-family: Sedgwick Ave Display;
+  font-size: 25px;
 }
 
 .order-item-box {
@@ -141,10 +137,40 @@ a {
   margin-top: -8px;
 }
 
+.log-btn {
+  min-width: 200px;
+  border-radius: 4px;
+  border-top: 6px solid #f5e4a2!important;
+  border-right: 3px solid hsl(48, 75%, 71%)!important;
+  border-bottom: 15px solid #edb130!important;
+  border-left: 15px solid #cf9b2a!important;
+  box-shadow: -6px 6px 2px 2px #664d17;
+  align-self: center;
+  margin: 50px;
+}
+
+.edit-btn {
+  border-radius: 4px;
+  border-top: 2px solid #f5e4a2!important;
+  border-right: 1px solid #edd77f!important;;
+  border-bottom: 5px solid #edb130!important;
+  border-left: 5px solid #cf9b2a!important;
+  box-shadow: -2px 2px 2px #9a7320;
+}
+
+.del-btn {
+  border-radius: 4px;
+  border-top: 2px solid #f79ea0!important;
+  border-right: 1px solid #f16f71!important;;
+  border-bottom: 5px solid #e20206!important;
+  border-left: 5px solid #c30205!important;
+  box-shadow: -2px 2px 2px #7d0204;
+
+}
+
 p {
   margin-bottom: 1px;
 }
-
 
 #order-summ {
   color: white;
@@ -156,7 +182,7 @@ p {
 
 #search-bar {
   display: flex;
-  width: 40%;
+  width: 30%;
   align-items: center;
   margin-right: 100px;
 }
@@ -171,6 +197,7 @@ p {
 
 #search-btn {
   padding: 0;
+  margin: 4px 10px;
   align-self: flex-end;
   background-color: transparent;
   border: none;
@@ -211,6 +238,20 @@ p {
 
 .green {
   background-color: #42EF02;
+}
+
+#rev-box {
+  background-color: #18265B;
+  margin: 30px;
+  width: 50%;
+  padding: 20px;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif
+  
+}
+
+span {
+  color:#EDC630;
 }
 
 .button {
@@ -306,4 +347,11 @@ p {
   height: calc(100% - 4px);
   background-color: rgba(240, 243, 207, 0.649);
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .75), inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+.title {
+  font-family: Sedgwick Ave Display;
+  margin: 20px;
+  color: white;
+  font-size: 40px;
 }

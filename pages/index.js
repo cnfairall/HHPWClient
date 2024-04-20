@@ -1,4 +1,4 @@
-import { Image, Button } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
 
@@ -11,7 +11,7 @@ function Home() {
       <div
         className="column-center"
       >
-        <Image style={{ height: '400px', width: '400px', marginBottom: '20px' }} src="/images/logoname.png" />
+        <Image style={{ height: '400px', width: '400px' }} src="/images/logoname.png" />
         <div id="home-buttons">
           <Link passHref href="/orders">
             <div className="button">

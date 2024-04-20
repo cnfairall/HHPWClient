@@ -21,15 +21,15 @@ export default function NavBar() {
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto large Sedgwick">
+          <Nav className="me-auto Sedgwick">
             <Link passHref href="/orders/new">
-              <Nav.Link>NEW</Nav.Link>
+              <Nav.Link className="large">NEW</Nav.Link>
             </Link>
             <Link passHref href="/orders">
-              <Nav.Link>ORDERS</Nav.Link>
+              <Nav.Link className="large">ORDERS</Nav.Link>
             </Link>
             <Link passHref href="/revenue">
-              <Nav.Link>REVENUE</Nav.Link>
+              <Nav.Link className="large">REVENUE</Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>

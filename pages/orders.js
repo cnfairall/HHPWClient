@@ -23,14 +23,14 @@ export default function ViewOrders() {
         className="mb-3"
       >
         <Tab eventKey="open" title="Open">
-          <div id="open" className="column Sedgwick">
+          <div id="open" className="column">
             {orders.openOrders?.map((order) => (
               <OrderCard order={order} key={order.id} />
             ))}
           </div>
         </Tab>
         <Tab eventKey="closed" title="Closed">
-          <div id="closed" className="column Sedgwick">
+          <div id="closed" className="column">
             {orders.closedOrders?.map((order) => (
               <OrderCard order={order} key={order.id} />
             ))}

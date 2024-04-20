@@ -22,19 +22,27 @@ export default function ViewRevenue() {
   }, []);
 
   return (
-    <Container style={{ backgroundColor: 'white', margin: '20px' }}>
-      <div>
-        <h4>Closed Orders:</h4>
-        <h3>{payments.length}</h3>
-      </div>
-      <div>
-        <h4>Total Revenue:</h4>
-        <h3>${revenue}</h3>
-      </div>
-      <div>
-        <h4>Total Tips:</h4>
-        <h3>${tips}</h3>
-      </div>
-    </Container>
+    <div className="column-center">
+      <h1 className="title">FAST STATS</h1>
+      <Container id="rev-box">
+        <div>
+          <h4>Closed Orders: <span>
+            {payments.length}</span>
+          </h4>
+        </div>
+        <div>
+          <h4>Total Revenue: <span>
+            ${revenue}
+          </span>
+          </h4>
+        </div>
+        <div>
+          <h4>Total Tips: <span>
+            ${tips}
+          </span>
+          </h4>
+        </div>
+      </Container>
+    </div>
   );
 }

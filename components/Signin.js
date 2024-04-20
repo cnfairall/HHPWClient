@@ -7,7 +7,7 @@ function Signin() {
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
       style={{
-        height: '90vh',
+        height: '100vh',
         padding: '30px',
         margin: '0 auto',
         zIndex: 1,
@@ -15,11 +15,12 @@ function Signin() {
         width: '100%',
         minWidth: '30rem',
         paddingBlock: '0 5rem',
+        color: 'white',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      <h1>Hi.</h1>
+      <p>Click the button below to enter</p>
+      <Button size="lg" className="yellow log-btn" onClick={signIn}>
         Sign In
       </Button>
     </div>

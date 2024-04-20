@@ -99,12 +99,12 @@ export default function OrderCard({ order }) {
           <>
             <div className="edit spread">
               <Link passHref href={`/orders/edit/${order.id}`}>
-                <Button className="yellow">
+                <Button className="edit-btn yellow">
                   <i className="bi bi-pencil-fill" />
 
                 </Button>
               </Link>
-              <Button className="red" onClick={confirmDelete}>
+              <Button className="del-btn red" onClick={confirmDelete}>
                 <i className="bi bi-trash3-fill" />
               </Button>
             </div>
