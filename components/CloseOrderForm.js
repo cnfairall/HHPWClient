@@ -75,7 +75,7 @@ function CloseOrderForm({ order }) {
           />
           <InputGroup.Text>.00</InputGroup.Text>
         </InputGroup>
-        <Button style={{ justifyContent: 'center' }} variant="primary" type="submit">
+        <Button style={{ justifyContent: 'center' }} className="del-btn red" type="submit">
           Submit
         </Button>
       </Form>

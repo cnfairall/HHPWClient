@@ -46,7 +46,7 @@ export default function MenuSelect() {
           <Modal.Dialog>{menuItems[formData?.itemId - 1]?.itemName} has been added to order #{formData.orderId}</Modal.Dialog>
         </Modal.Body>
       </Modal>
-      <Form className="spread align-content-center flex-wrap" onSubmit={handleSubmit}>
+      <Form className="d-flex flex-row flex-wrap align-items-center" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Select
             aria-label="Menu Item"
@@ -68,7 +68,7 @@ export default function MenuSelect() {
           }
           </Form.Select>
         </Form.Group>
-        <Button type="submit">Add</Button>
+        <Button className="add-btn" type="submit">ADD</Button>
       </Form>
     </>
   );

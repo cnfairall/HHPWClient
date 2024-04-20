@@ -45,6 +45,7 @@ function OrderForm({ order }) {
       id="order-form"
       onSubmit={handleSubmit}
     >
+      <div className="title" style={{ alignSelf: 'center' }}>Open Order</div>
       <Form.Group className="mb-3">
         <Form.Label>Customer Name</Form.Label>
         <Form.Control
@@ -101,8 +102,8 @@ function OrderForm({ order }) {
         </Form.Select>
       </Form.Group>
 
-      <Button id="order-form-btn" variant="primary" type="submit">
-        Submit
+      <Button id="order-form-btn" className="del-btn red" type="submit">
+        SUBMIT
       </Button>
     </Form>
   );

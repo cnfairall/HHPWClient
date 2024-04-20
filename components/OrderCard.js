@@ -57,13 +57,17 @@ export default function OrderCard({ order }) {
         <Link passHref href={`/orders/${order?.id}`}>
           <Card.Body className="flex">
             <div className="cust-info">
-
-              <h5>{order?.custName}</h5>
+              <h5>{order?.custName}
+                <span style={{ position: 'absolute', right: '10px' }}>
+                  {order?.isClosed ? (
+                    <i style={{ color: '#42EF02', right: '0' }} className="bi bi-vinyl fill" />
+                  ) : ('')}
+                </span>
+              </h5>
               <p>{order?.phoneNum}</p>
               <p>{order?.custEmail}</p>
               <p>{orderType?.name}</p>
             </div>
-
             {isDetail && noItems === true ? (<p>No items</p>) : ('')}
             {isDetail && order?.isClosed === false ? (
               order?.items.map((singleItem) => (
@@ -76,14 +80,14 @@ export default function OrderCard({ order }) {
                     <Modal.Body>
                       <p>Remove {singleItem?.item.itemName} from this order?</p>
                     </Modal.Body>
-                    <Button onClick={handleCloseItem}>Cancel</Button>
-                    <Button onClick={() => deleteItem(singleItem)}>Delete</Button>
+                    <Button className="edit-btn yellow" onClick={handleCloseItem}>CANCEL</Button>
+                    <Button className="del-btn red" onClick={() => deleteItem(singleItem)}>DELETE</Button>
                   </Modal>
                 </div>
               ))
             ) : ('')}
             {isDetail && order?.isClosed === false ? (
-              <p style={{ margin: '8px' }}>Subtotal: ${order?.subtotal}</p>
+              <p>Subtotal: ${order?.subtotal}</p>
             ) : ('')}
 
             {isDetail && order?.isClosed === true ? (
@@ -112,8 +116,8 @@ export default function OrderCard({ order }) {
               <Modal.Body>
                 <p>Are you sure you want to delete order #{order?.id}?</p>
               </Modal.Body>
-              <Button onClick={handleClose}>Cancel</Button>
-              <Button onClick={deleteAnOrder}>Delete</Button>
+              <Button className="edit-btn yellow" onClick={handleClose}>CANCEL</Button>
+              <Button className="del-btn red" onClick={deleteAnOrder}>DELETE</Button>
             </Modal>
           </>
         ) : ('')}

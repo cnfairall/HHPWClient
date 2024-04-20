@@ -21,11 +21,12 @@ export default function OrderDetails() {
   return (
     <div className="d-flex flex-column align-items-center justify-items-center">
       <OrderCard order={order} />
+      <br />
       {order?.isClosed === false ? (
         <>
           <MenuSelect />
           <Link passHref href={`/orders/close/${order?.id}`}>
-            <Button>Close order</Button>
+            <Button className="edit-btn yellow">CLOSE ORDER</Button>
           </Link>
         </>
       ) : (

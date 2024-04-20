@@ -26,20 +26,15 @@ export default function ViewRevenue() {
       <h1 className="title">FAST STATS</h1>
       <Container id="rev-box">
         <div>
-          <h4>Closed Orders: <span>
-            {payments.length}</span>
+          <h4>Closed Orders: <span>{payments.length}</span>
           </h4>
         </div>
         <div>
-          <h4>Total Revenue: <span>
-            ${revenue}
-          </span>
+          <h4>Total Revenue: <span>${revenue}</span>
           </h4>
         </div>
         <div>
-          <h4>Total Tips: <span>
-            ${tips}
-          </span>
+          <h4>Total Tips: <span>${tips}</span>
           </h4>
         </div>
       </Container>

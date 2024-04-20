@@ -86,6 +86,7 @@ a {
 .column {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .column-center {
@@ -114,6 +115,8 @@ h5 {
 
 .cust-info {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .order-item {
@@ -129,6 +132,10 @@ h5 {
 }
 
 .bi-trash3-fill {
+  color: black;
+}
+
+.bi-pencil-fill {
   color: black;
 }
 
@@ -156,6 +163,18 @@ h5 {
   border-bottom: 5px solid #edb130!important;
   border-left: 5px solid #cf9b2a!important;
   box-shadow: -2px 2px 2px #9a7320;
+}
+
+.add-btn {
+  background-color: #42EF02;
+  color:white;
+  font-weight: bold;
+  border-radius: 4px;
+  border-top: 2px solid #cdf6be!important;
+  border-right: 1px solid #9df67d!important;;
+  border-bottom: 5px solid #35be03!important;
+  border-left: 5px solid #288f02!important;
+  box-shadow: -2px 2px 2px #195702;
 }
 
 .del-btn {
@@ -220,13 +239,15 @@ p {
 .yellow {
   background-color: #EDC630;
   font-weight: bold;
-  color: #18265B;
+  color: WHITE;
   border: none;
 }
 
 .red {
   background-color: #FE0004;
   border: none;
+  color: white;
+  font-weight: bold;
 }
 
 .blue {

@@ -13,7 +13,7 @@ export default function ViewOrders() {
     <div style={{
       height: '90vh',
       padding: '20px',
-      maxWidth: '700px',
+      maxWidth: '900px',
       margin: '0 auto',
     }}
     >
