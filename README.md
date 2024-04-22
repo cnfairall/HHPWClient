@@ -14,6 +14,7 @@ This is the user interface for my full stack app replicating a point of sale sys
 - On open orders, customer information can be edited and orders can be deleted
 - Closing an order prompts a payment form, which upon submission creates a payment
 - A revenue page displays total payments, total tips and total completed orders
+- Users can search for orders by customer name or phone number
 
 ## Video Walkthrough of APP NAME
 https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
